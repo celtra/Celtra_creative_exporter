@@ -79,6 +79,7 @@ async function checkDir(dirName, iteration) {
      *      - REPORT SCRAPING
      */
     console.clear();
+    // hardcoded creatives for now
     const creatives = [
         "0a0c3817",
         "0ec27478",
@@ -195,7 +196,7 @@ async function checkDir(dirName, iteration) {
     ];
     logger.info("Starting ...");
     logger.info(`Got ${creatives.length} creatives`);
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     logger.info("Launched browser");
     const page = await browser.newPage();
     logger.info("Created new tab");
